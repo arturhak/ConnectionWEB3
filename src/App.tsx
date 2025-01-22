@@ -67,6 +67,14 @@ function App() {
   return (
     <div className="App">
       <button onClick={handleConnect}>{!isConnected? "Connect": "disconnect"}</button>
+        <br/>
+        {isConnected?<div>
+            <div>isConnected: {isConnected.toString()}</div>
+            <div>address: {address}</div>
+            <div>chainId: {chainId}</div>
+            <div>status: {status}</div>
+        </div>:<div>isConnected: {isConnected.toString()}</div>}
+
     </div>
   );
 }
